@@ -1,0 +1,17 @@
+.todo__item {
+  @include main_border;
+  position: relative;
+  margin-bottom: -1px;
+  padding: 15px;
+  padding-left: 50px;
+  background-color: white;
+  cursor: pointer;
+
+  @include checkBox("&::before");
+
+  &.completed {
+    @include checkMark("&::after");
+    color: lighten($textColor, 50%);
+    text-decoration: line-through;
+  }
+}

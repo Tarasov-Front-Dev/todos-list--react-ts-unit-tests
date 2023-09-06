@@ -1,13 +1,270 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  font-family: Arial, sans-serif;
+  font-weight: 200;
+  font-size: 1.1rem;
+  color: rgb(79, 79, 79);
+  border: 1px solid rgb(238, 238, 238);
+  position: relative;
+  width: 100%;
+  margin-bottom: -1px;
+  padding: 15px;
+  padding-left: 50px;
+}
+input:focus-visible {
+  outline: none;
+}
+input::-moz-placeholder {
+  color: #cfcfcf;
+  font-style: italic;
+}
+input::placeholder {
+  color: #cfcfcf;
+  font-style: italic;
+}
+
+.todos__form input {
+  position: relative;
+}
+.todos__form label {
+  position: relative;
+}
+.todos__form label::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 30%;
+  width: 7px;
+  height: 7px;
+  border-bottom: 2px solid rgb(238, 238, 238);
+  border-right: 2px solid rgb(238, 238, 238);
+  z-index: 999;
+  transform: rotate(45deg) translateY(-50%);
+}
+
+.todo__item {
+  border: 1px solid rgb(238, 238, 238);
+  position: relative;
+  margin-bottom: -1px;
+  padding: 15px;
+  padding-left: 50px;
+  background-color: white;
+  cursor: pointer;
+}
+.todo__item::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid rgb(238, 238, 238);
+}
+.todo__item.completed {
+  color: #cfcfcf;
+  text-decoration: line-through;
+}
+.todo__item.completed::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 14px;
+  top: 45%;
+  width: 5px;
+  height: 12px;
+  border-bottom: 1px solid rgb(124, 194, 178);
+  border-right: 1px solid rgb(124, 194, 178);
+  transform: rotate(40deg) translateY(-50%);
+}
+
+.todos__filter {
+  border: 1px solid rgb(238, 238, 238);
+  padding: 7px 15px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: smaller;
+  background-color: white;
+}
+.todos__filter .todos__filters {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 15px;
+}
+.todos__filter .todos__filters li {
+  border: 1px solid rgb(238, 238, 238);
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.todos__filter .todos__clearCompleted {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "Fndtn Sns Cd Lt";
+  src: local("Fndtn Sns Cd Lt"), url("./Assets/fonts/Fontspring-DEMO-FoundationSans-LightCd.otf");
+}
+html {
+  font-family: Arial, sans-serif;
+  font-weight: 200;
+  font-size: 1.1rem;
+  color: rgb(79, 79, 79);
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.todos__wrapper {
+  padding: 10px;
+  width: 700px;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: rgb(245, 245, 245);
+}
+.todos__wrapper h1 {
+  align-self: center;
+  font-size: 8rem;
+  font-weight: 100;
+  font-family: "Fndtn Sns Cd Lt";
+  color: rgb(233, 217, 216);
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,41 @@
+@mixin main_text {
+  font: {
+    family: Arial, sans-serif;
+    weight: 200;
+    size: 1.1rem;
+  }
+  color: $textColor;
+}
+
+@mixin main_border {
+  border: 1px solid $borderColor;
+}
+
+@mixin checkBox($selector) {
+  #{$selector} {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid $borderColor;
+  }
+}
+
+@mixin checkMark($selector) {
+  #{$selector} {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 14px;
+    top: 45%;
+    width: 5px;
+    height: 12px;
+    border-bottom: 1px solid $checkMarkColor;
+    border-right: 1px solid $checkMarkColor;
+    transform: rotate(40deg) translateY(-50%);
+  }
+}

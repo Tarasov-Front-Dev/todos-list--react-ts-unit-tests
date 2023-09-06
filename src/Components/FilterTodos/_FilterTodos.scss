@@ -1,0 +1,27 @@
+.todos__filter {
+  @include main_border;
+  padding: 7px 15px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: smaller;
+  background-color: white;
+
+  .todos__filters {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
+
+    li {
+      @include main_border;
+      padding: 8px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+
+  .todos__clearCompleted {
+    cursor: pointer;
+  }
+}

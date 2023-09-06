@@ -1,0 +1,45 @@
+@import "./reset";
+@import "./utils";
+@import "./constants";
+@import "./index_styles";
+@import "./../UI/Input/Input";
+@import "./../Components/FormNewTodo/FormNewTodo.scss";
+@import "./../Components/Todos/Todos.scss";
+@import "./../Components/FilterTodos/FilterTodos";
+
+@font-face {
+  font-family: "Fndtn Sns Cd Lt";
+  src: local("Fndtn Sns Cd Lt"),
+    url("./Assets/fonts/Fontspring-DEMO-FoundationSans-LightCd.otf");
+}
+
+html {
+  @include main_text;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.todos__wrapper {
+  padding: 10px;
+  width: 700px;
+
+  display: flex;
+  flex-flow: column nowrap;
+
+  background-color: $bgColor;
+
+  h1 {
+    align-self: center;
+
+    font: {
+      size: 8rem;
+      weight: 100;
+      family: "Fndtn Sns Cd Lt";
+    }
+    color: $h1Color;
+  }
+}

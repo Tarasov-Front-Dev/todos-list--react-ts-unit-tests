@@ -1,0 +1,19 @@
+input {
+  @include main_text;
+  @include main_border;
+
+  position: relative;
+  width: 100%;
+  margin-bottom: -1px;
+  padding: 15px;
+  padding-left: 50px;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: lighten($textColor, 50%);
+    font-style: italic;
+  }
+}
