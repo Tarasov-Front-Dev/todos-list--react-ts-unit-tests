@@ -1,13 +1,8 @@
+@import "./fonts";
 @import "./reset";
 @import "./constants";
 @import "./utils";
 @import "./App";
-
-@font-face {
-  font-family: "Fndtn Sns Cd Lt";
-  src: local("Fndtn Sns Cd Lt"),
-    url("./Assets/fonts/Fontspring-DEMO-FoundationSans-LightCd.otf");
-}
 
 html {
   @include main_text;

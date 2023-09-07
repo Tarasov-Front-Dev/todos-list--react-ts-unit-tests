@@ -1,3 +1,4 @@
 .todos__list {
-  @import "./../Todo/Todo.scss";
+  @include outer_shadow(0 4px 2px 1px);
+  @import "./../Todo/Todo";
 }

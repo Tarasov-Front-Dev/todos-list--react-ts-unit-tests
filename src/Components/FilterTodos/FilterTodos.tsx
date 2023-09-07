@@ -28,8 +28,10 @@ export default function FilterTodos({
       );
   };
 
-  const handleClearCompletedTodos = () =>
+  const handleClearCompletedTodos = () => {
     setTodos((todos) => todos.filter((todo) => !todo.completed));
+    setFilter(FilterOptions.ALL);
+  };
 
   const liItems = Object.values(FilterOptions).map((option) => (
     <li

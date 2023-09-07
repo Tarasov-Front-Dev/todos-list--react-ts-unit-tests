@@ -1,4 +1,5 @@
 .todos__form {
+  @include outer_shadow(0 4px 2px 1px);
   input {
     position: relative;
   }
