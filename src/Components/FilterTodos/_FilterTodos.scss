@@ -9,8 +9,8 @@
   align-items: center;
   font-size: smaller;
   background-color: white;
-  box-shadow: -1px 0 2px 0 darken($bgColor, 10%),
-    1px 0 2px 0 darken($bgColor, 10%);
+  box-shadow: -2px 1px 2px -1px darken($bgColor, 10%),
+    2px 1px 2px -1px darken($bgColor, 10%);
 
   .todos__filters {
     display: flex;

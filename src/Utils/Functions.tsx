@@ -7,5 +7,6 @@ export function filteredTodos(todos: TodoModel[], filter: FilterOptions) {
     if (filter === FilterOptions.ACTIVE) return !todo[FilterOptions.COMPLETED];
     if (filter === FilterOptions.COMPLETED)
       return todo[FilterOptions.COMPLETED];
+    return [];
   });
 }

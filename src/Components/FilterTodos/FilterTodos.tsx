@@ -33,7 +33,7 @@ export default function FilterTodos({
     setFilter(FilterOptions.ALL);
   };
 
-  const liItems = Object.values(FilterOptions).map((option) => (
+  const filterOptions = Object.values(FilterOptions).map((option) => (
     <li
       key={option}
       className={option === filter ? "toggled" : ""}
@@ -48,7 +48,7 @@ export default function FilterTodos({
   return (
     <section className="todos__filter">
       <div className="todos__left">{itemsLeft} items left</div>
-      <ul className="todos__filters">{liItems}</ul>
+      <ul className="todos__filters">{filterOptions}</ul>
       <div
         className="todos__clearCompleted"
         onClick={handleClearCompletedTodos}

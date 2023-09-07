@@ -30,7 +30,7 @@ function App() {
         filter={filter}
         setFilter={setFilter}
         setTodos={setTodos}
-        itemsLeft={memoizedFilteredTodos.length}
+        itemsLeft={memoizedFilteredTodos.length ?? 0}
       />
     </article>
   );

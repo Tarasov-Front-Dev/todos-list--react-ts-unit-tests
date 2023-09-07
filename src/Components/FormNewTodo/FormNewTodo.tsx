@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { TodoModel } from "../../App";
 import Input from "../../UI/Input/Input";
 
@@ -25,7 +24,12 @@ export default function FormNewTodo({ setTodos }: FormNewTodoProps) {
   };
 
   return (
-    <form name="todos__form" className="todos__form" onSubmit={handleSubmit}>
+    <form
+      name="todos__form"
+      className="todos__form"
+      onSubmit={handleSubmit}
+      data-testid="form"
+    >
       <label htmlFor="newTodo">
         <Input
           id="newTodo"
