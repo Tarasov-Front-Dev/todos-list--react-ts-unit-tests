@@ -132,6 +132,13 @@ table {
   border-spacing: 0;
 }
 
+.todos__filter .todos__clearCompleted:hover, .todos__filter .todos__filters li:hover {
+  box-shadow: 0 0 3px 1px rgb(245, 245, 245);
+}
+.todos__filter .todos__clearCompleted:active, .todos__filter .todos__filters li:active {
+  box-shadow: inset 0 0 3px 1px rgb(245, 245, 245);
+}
+
 input {
   font-family: Arial, sans-serif;
   font-weight: 200;
@@ -175,7 +182,7 @@ input::placeholder {
   transform: rotate(45deg) translateY(-50%);
 }
 
-.todo__item {
+.todos__list .todo__item {
   border: 1px solid rgb(238, 238, 238);
   position: relative;
   margin-bottom: -1px;
@@ -184,7 +191,7 @@ input::placeholder {
   background-color: white;
   cursor: pointer;
 }
-.todo__item::before {
+.todos__list .todo__item::before {
   content: "";
   position: absolute;
   left: 10px;
@@ -195,11 +202,11 @@ input::placeholder {
   border-radius: 50%;
   border: 1px solid rgb(238, 238, 238);
 }
-.todo__item.completed {
+.todos__list .todo__item.completed {
   color: #cfcfcf;
   text-decoration: line-through;
 }
-.todo__item.completed::after {
+.todos__list .todo__item.completed::after {
   content: "";
   display: block;
   position: absolute;
@@ -231,10 +238,33 @@ input::placeholder {
   border: 1px solid rgb(238, 238, 238);
   padding: 8px;
   border-radius: 5px;
+  border-color: transparent;
   cursor: pointer;
 }
+.todos__filter .todos__filters li.toggled {
+  border-color: rgb(245, 245, 245);
+}
 .todos__filter .todos__clearCompleted {
+  border: 1px solid rgb(238, 238, 238);
+  padding: 8px;
+  border-radius: 5px;
+  border-color: transparent;
   cursor: pointer;
+}
+
+.todos__wrapper {
+  padding: 10px;
+  width: 700px;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: rgb(245, 245, 245);
+}
+.todos__wrapper h1 {
+  align-self: center;
+  font-size: 8rem;
+  font-weight: 100;
+  font-family: "Fndtn Sns Cd Lt";
+  color: rgb(233, 217, 216);
 }
 
 @font-face {
@@ -252,19 +282,4 @@ body {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-}
-
-.todos__wrapper {
-  padding: 10px;
-  width: 700px;
-  display: flex;
-  flex-flow: column nowrap;
-  background-color: rgb(245, 245, 245);
-}
-.todos__wrapper h1 {
-  align-self: center;
-  font-size: 8rem;
-  font-weight: 100;
-  font-family: "Fndtn Sns Cd Lt";
-  color: rgb(233, 217, 216);
 }/*# sourceMappingURL=index.css.map */

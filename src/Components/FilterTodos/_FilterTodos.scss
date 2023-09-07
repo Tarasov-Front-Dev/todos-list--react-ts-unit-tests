@@ -15,13 +15,26 @@
 
     li {
       @include main_border;
+      @extend %hover_active;
+
       padding: 8px;
       border-radius: 5px;
+      border-color: transparent;
       cursor: pointer;
+
+      &.toggled {
+        border-color: $bgColor;
+      }
     }
   }
 
   .todos__clearCompleted {
+    @include main_border;
+    @extend %hover_active;
+
+    padding: 8px;
+    border-radius: 5px;
+    border-color: transparent;
     cursor: pointer;
   }
 }
