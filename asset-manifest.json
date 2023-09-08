@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/todos-list--react-ts-unit-tests/static/css/main.7dd16dff.css",
+    "main.js": "/todos-list--react-ts-unit-tests/static/js/main.3c7f1b70.js",
+    "static/js/787.fa6875d4.chunk.js": "/todos-list--react-ts-unit-tests/static/js/787.fa6875d4.chunk.js",
+    "static/media/Aileron-UltraLightItalic.otf": "/todos-list--react-ts-unit-tests/static/media/Aileron-UltraLightItalic.fb36292837f953ac5905.otf",
+    "static/media/Aileron-UltraLight.otf": "/todos-list--react-ts-unit-tests/static/media/Aileron-UltraLight.44c0721170eb970f4c67.otf",
+    "index.html": "/todos-list--react-ts-unit-tests/index.html",
+    "main.7dd16dff.css.map": "/todos-list--react-ts-unit-tests/static/css/main.7dd16dff.css.map",
+    "main.3c7f1b70.js.map": "/todos-list--react-ts-unit-tests/static/js/main.3c7f1b70.js.map",
+    "787.fa6875d4.chunk.js.map": "/todos-list--react-ts-unit-tests/static/js/787.fa6875d4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7dd16dff.css",
+    "static/js/main.3c7f1b70.js"
+  ]
+}
