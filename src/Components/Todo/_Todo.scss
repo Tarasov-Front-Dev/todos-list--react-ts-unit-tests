@@ -13,5 +13,8 @@
     @include checkMark("&::after");
     color: lighten($textColor, 50%);
     text-decoration: line-through;
+    &::before {
+      border-color: darken($borderColor, 10%);
+    }
   }
 }

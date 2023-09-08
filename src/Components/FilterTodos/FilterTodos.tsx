@@ -48,7 +48,9 @@ export default function FilterTodos({
   return (
     <section className="todos__filter">
       <div className="todos__left">{itemsLeft} items left</div>
-      <ul className="todos__filters">{filterOptions}</ul>
+      <ul className="todos__filters" data-testid="todos__filter">
+        {filterOptions}
+      </ul>
       <div
         className="todos__clearCompleted"
         onClick={handleClearCompletedTodos}

@@ -1,17 +1,122 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FilterTodos FilterTodos snapshot 1`] = `
+exports[`App Toggle todos filter 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
+      <article
+        class="todos__wrapper"
+      >
+        <h1>
+          todos
+        </h1>
+        <form
+          class="todos__form"
+          data-testid="todos__form"
+          name="todos__form"
+        >
+          <label
+            for="newTodo"
+          >
+            <input
+              autocomplete="off"
+              id="newTodo"
+              name="newTodo"
+              placeholder="What needs to be done?"
+              value=""
+            />
+          </label>
+        </form>
+        <ul
+          class="todos__list"
+          data-testid="todos__list"
+        >
+          <li
+            class="todo__item"
+          >
+            Second task
+          </li>
+        </ul>
+        <section
+          class="todos__filter"
+        >
+          <div
+            class="todos__left"
+          >
+            1
+             items left
+          </div>
+          <ul
+            class="todos__filters"
+            data-testid="todos__filter"
+          >
+            <li
+              class=""
+            >
+              All
+            </li>
+            <li
+              class="toggled"
+            >
+              Active
+            </li>
+            <li
+              class=""
+            >
+              Completed
+            </li>
+          </ul>
+          <div
+            class="todos__clearCompleted"
+          >
+            Clear completed
+          </div>
+        </section>
+      </article>
+    </div>
+  </body>,
+  "container": <div>
+    <article
+      class="todos__wrapper"
+    >
+      <h1>
+        todos
+      </h1>
+      <form
+        class="todos__form"
+        data-testid="todos__form"
+        name="todos__form"
+      >
+        <label
+          for="newTodo"
+        >
+          <input
+            autocomplete="off"
+            id="newTodo"
+            name="newTodo"
+            placeholder="What needs to be done?"
+            value=""
+          />
+        </label>
+      </form>
+      <ul
+        class="todos__list"
+        data-testid="todos__list"
+      >
+        <li
+          class="todo__item"
+        >
+          Second task
+        </li>
+      </ul>
       <section
         class="todos__filter"
       >
         <div
           class="todos__left"
         >
-          0
+          1
            items left
         </div>
         <ul
@@ -19,12 +124,12 @@ Object {
           data-testid="todos__filter"
         >
           <li
-            class="toggled"
+            class=""
           >
             All
           </li>
           <li
-            class=""
+            class="toggled"
           >
             Active
           </li>
@@ -40,44 +145,7 @@ Object {
           Clear completed
         </div>
       </section>
-    </div>
-  </body>,
-  "container": <div>
-    <section
-      class="todos__filter"
-    >
-      <div
-        class="todos__left"
-      >
-        0
-         items left
-      </div>
-      <ul
-        class="todos__filters"
-        data-testid="todos__filter"
-      >
-        <li
-          class="toggled"
-        >
-          All
-        </li>
-        <li
-          class=""
-        >
-          Active
-        </li>
-        <li
-          class=""
-        >
-          Completed
-        </li>
-      </ul>
-      <div
-        class="todos__clearCompleted"
-      >
-        Clear completed
-      </div>
-    </section>
+    </article>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

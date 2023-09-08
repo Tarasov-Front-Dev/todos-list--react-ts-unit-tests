@@ -7,6 +7,7 @@ Object {
     <div>
       <ul
         class="todos__list"
+        data-testid="todos__list"
       >
         <li
           class="todo__item"
@@ -24,6 +25,7 @@ Object {
   "container": <div>
     <ul
       class="todos__list"
+      data-testid="todos__list"
     >
       <li
         class="todo__item"

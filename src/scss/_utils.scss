@@ -29,13 +29,13 @@
     content: "";
     display: block;
     position: absolute;
-    left: 14px;
+    left: 15px;
     top: 45%;
     width: 5px;
     height: 12px;
     border-bottom: 1px solid $checkMarkColor;
     border-right: 1px solid $checkMarkColor;
-    transform: rotate(40deg) translateY(-50%);
+    transform: rotate(30deg) translateY(-50%) skewY(20deg);
   }
 }
 
