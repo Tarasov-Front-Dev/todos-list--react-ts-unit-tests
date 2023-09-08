@@ -1,6 +1,5 @@
-# To start project clone repo and fire in repo dir "npm i && npm run start"
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Todo's List by React, TS and Unit Tests
+To start project clone repo and fire in repo dir "npm i && npm run start".
 
 ## Project made by using:
 * React
