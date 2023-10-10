@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html,
@@ -151,6 +152,18 @@ input::-moz-placeholder {
   color: #cfcfcf;
   font-style: italic;
 }
+input::-webkit-input-placeholder {
+  color: #cfcfcf;
+  font-style: italic;
+}
+input:-ms-input-placeholder {
+  color: #cfcfcf;
+  font-style: italic;
+}
+input::-ms-input-placeholder {
+  color: #cfcfcf;
+  font-style: italic;
+}
 input::placeholder {
   color: #cfcfcf;
   font-style: italic;
@@ -172,7 +185,9 @@ input::placeholder {
   border-bottom: 2px solid rgb(238, 238, 238);
   border-right: 2px solid rgb(238, 238, 238);
   z-index: 999;
-  transform: rotate(45deg) translateY(-50%);
+  -webkit-transform: rotate(45deg) translateY(-50%);
+      -ms-transform: rotate(45deg) translateY(-50%);
+          transform: rotate(45deg) translateY(-50%);
 }
 
 .todo__item {
@@ -189,7 +204,9 @@ input::placeholder {
   position: absolute;
   left: 10px;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -209,22 +226,38 @@ input::placeholder {
   height: 12px;
   border-bottom: 1px solid rgb(124, 194, 178);
   border-right: 1px solid rgb(124, 194, 178);
-  transform: rotate(40deg) translateY(-50%);
+  -webkit-transform: rotate(40deg) translateY(-50%);
+      -ms-transform: rotate(40deg) translateY(-50%);
+          transform: rotate(40deg) translateY(-50%);
 }
 
 .todos__filter {
   border: 1px solid rgb(238, 238, 238);
   padding: 7px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: smaller;
   background-color: white;
 }
 .todos__filter .todos__filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   gap: 15px;
 }
 .todos__filter .todos__filters li {
@@ -249,22 +282,36 @@ html {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .todos__wrapper {
   padding: 10px;
   width: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   background-color: rgb(245, 245, 245);
 }
 .todos__wrapper h1 {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   font-size: 8rem;
   font-weight: 100;
   font-family: "Fndtn Sns Cd Lt";
   color: rgb(233, 217, 216);
-}/*# sourceMappingURL=index.css.map */
+}
