@@ -1,5 +1,7 @@
 .todos__filter {
+  @extend %not_selectable;
   @include main_border;
+  position: relative;
   padding: 7px 15px;
   display: flex;
   flex-flow: row nowrap;
@@ -7,6 +9,8 @@
   align-items: center;
   font-size: smaller;
   background-color: white;
+  box-shadow: -2px 1px 2px -1px darken($bgColor, 10%),
+    2px 1px 2px -1px darken($bgColor, 10%);
 
   .todos__filters {
     display: flex;
@@ -15,13 +19,54 @@
 
     li {
       @include main_border;
+      @extend %hover_active;
+
       padding: 8px;
       border-radius: 5px;
+      border-color: transparent;
       cursor: pointer;
+
+      &.toggled {
+        border-color: $bgColor;
+      }
     }
   }
 
   .todos__clearCompleted {
+    @include main_border;
+    @extend %hover_active;
+
+    padding: 8px;
+    border-radius: 5px;
+    border-color: transparent;
     cursor: pointer;
+  }
+
+  &::before {
+    @extend %multiple_shasow;
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -12%;
+    left: 0.5%;
+    width: 99%;
+    height: 20px;
+
+    background-color: white;
+    z-index: -1;
+  }
+
+  &::after {
+    @extend %multiple_shasow;
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -22%;
+    left: 1%;
+    width: 98%;
+    height: 20px;
+
+    background-color: white;
+    z-index: -2;
   }
 }

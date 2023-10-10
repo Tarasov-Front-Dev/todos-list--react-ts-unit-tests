@@ -7,45 +7,56 @@ export enum FilterOptions {
 }
 
 type FilterTodosProps = {
-  filter: (typeof FilterOptions)[keyof typeof FilterOptions];
+  filter: FilterOptions;
   setFilter: React.Dispatch<React.SetStateAction<FilterOptions>>;
   setTodos: React.Dispatch<React.SetStateAction<TodoModel[]>>;
+  itemsLeft: number;
 };
 
 export default function FilterTodos({
   filter,
   setFilter,
   setTodos,
+  itemsLeft,
 }: FilterTodosProps) {
-  const handleFilterChange = (value: string) => {
-    if (FilterOptions[value as keyof typeof FilterOptions]) {
-      setFilter(value);
-    }
+  const handleFilterChange = (value: string | null) => {
+    if (!Object.keys(FilterOptions).some((key) => key === value?.toUpperCase()))
+      return;
+    else
+      setFilter(
+        FilterOptions[value?.toUpperCase() as keyof typeof FilterOptions]
+      );
   };
+
+  const handleClearCompletedTodos = () => {
+    setTodos((todos) => todos.filter((todo) => !todo.completed));
+    setFilter(FilterOptions.ALL);
+  };
+
+  const filterOptions = Object.values(FilterOptions).map((option) => (
+    <li
+      key={option}
+      className={option === filter ? "toggled" : ""}
+      onClick={(e) =>
+        handleFilterChange((e.target as HTMLLIElement).textContent)
+      }
+    >
+      {option[0].toUpperCase() + option.slice(1)}
+    </li>
+  ));
 
   return (
     <section className="todos__filter">
-      <div className="todos__left">__ items left</div>
-      <ul className="todos__filters">
-        <li className={"all" + (filter === FilterOptions.ALL ? " picked" : "")}>
-          All
-        </li>
-        <li
-          className={
-            "active" + (filter === FilterOptions.ACTIVE ? " picked" : "")
-          }
-        >
-          Active
-        </li>
-        <li
-          className={
-            "completed" + (filter === FilterOptions.COMPLETED ? " picked" : "")
-          }
-        >
-          Completed
-        </li>
+      <div className="todos__left">{itemsLeft} items left</div>
+      <ul className="todos__filters" data-testid="todos__filter">
+        {filterOptions}
       </ul>
-      <div className="todos__clearCompleted">Clear completed</div>
+      <div
+        className="todos__clearCompleted"
+        onClick={handleClearCompletedTodos}
+      >
+        Clear completed
+      </div>
     </section>
   );
 }

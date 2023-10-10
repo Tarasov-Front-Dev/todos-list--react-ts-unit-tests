@@ -17,7 +17,7 @@ export default function Todos({ todos, setTodos }: TodosProps) {
     );
 
   return (
-    <ul className="todo__list">
+    <ul className="todos__list" data-testid="todos__list">
       {todos.map((todo) => (
         <Todo key={todo.id} todo={todo} completeTodo={completeTodo} />
       ))}

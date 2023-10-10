@@ -1,0 +1,27 @@
+@import "./../UI/Input/Input";
+@import "./../Components/FormNewTodo/FormNewTodo.scss";
+@import "./../Components/TodosList/TodosList.scss";
+@import "./../Components/FilterTodos/FilterTodos";
+
+.todos__wrapper {
+  position: relative;
+  padding: 10px;
+  padding-bottom: 20px;
+  width: 700px;
+
+  display: flex;
+  flex-flow: column nowrap;
+
+  background-color: $bgColor;
+  z-index: 0;
+
+  h1 {
+    align-self: center;
+
+    font: {
+      family: $mainFont;
+      size: 8rem;
+    }
+    color: $h1Color;
+  }
+}

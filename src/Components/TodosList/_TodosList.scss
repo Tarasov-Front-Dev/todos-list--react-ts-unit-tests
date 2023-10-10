@@ -1,0 +1,4 @@
+.todos__list {
+  @include outer_shadow(0 4px 2px 1px);
+  @import "./../Todo/Todo";
+}
